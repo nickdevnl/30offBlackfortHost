@@ -51,7 +51,7 @@ new Server(async client => {
                 if (packet.id == 0x0) client.send(new PacketWriter(0x0).writeJSON({
                     version: { name: "§4• §cOffline", protocol: -1 },
                     players: { max: -1, online: -1 },
-                    description: { text: "§cThis server is offline.\n§7To start it, join the server!" }
+                    description: { text: "§cThis server is offline.\n§7To start it, join the server! \n To create your own server go to blackforthosting.com and create an ticket." }
                 }))
                 if (packet.id == 0x1) client.send(new PacketWriter(0x1).write(packet.read(8)))
             })
